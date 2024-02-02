@@ -1,2 +1,14 @@
 name: sample container web
-steps: create env
+on:
+  workflow_dispatch:
+    inputs:
+      AWS_DEPLOY_ENVIRONMENT:
+        type: choice
+        description: 'Deployment Environment'
+        required: true
+        options:
+        - DEV
+        - QA
+        - STAGE
+        - TEST
+        - PROD
