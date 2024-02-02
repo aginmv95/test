@@ -1,0 +1,14 @@
+name: container web
+on:
+  workflow_dispatch:
+    inputs:
+      AZURE_DEPLOY_ENVIRONMENT:
+        type: choice
+        description: 'Deployment Environment'
+        required: true
+        options:
+        - DEV
+        - QA
+        - STAGE
+        - TEST
+        - PROD
